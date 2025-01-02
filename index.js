@@ -1,8 +1,10 @@
-const express = require("express");
 const { Resend } = require("resend");
+const express = require("express");
+const cors = require("cors");
 const app = express();
 require("dotenv").config();
 
+app.use(cors());
 const resendApiKey = process.env.API_KEY;
 const recepientEmail = process.env.RECEPIENT_EMAIL;
 
